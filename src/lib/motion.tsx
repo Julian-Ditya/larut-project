@@ -9,11 +9,11 @@ import {
 } from "react";
 
 // ✅ Fix: pakai useSyncExternalStore — cara resmi React 18 untuk subscribe ke external store
-function subscribeToMediaQuery(query: string, callback: () => void) {
+const subscribeToMediaQuery = (query: string, cb: () => void) => {
   const mq = window.matchMedia(query);
-  mq.addEventListener("change", callback);
-  return () => mq.removeEventListener("change", callback);
-}
+  mq.addEventListener("change", cb);
+  return () => mq.removeEventListener("change", cb);
+};
 
 export function usePrefersReducedMotion(): boolean {
   return useSyncExternalStore(
