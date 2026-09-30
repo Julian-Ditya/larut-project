@@ -15,8 +15,9 @@ export function NutritionDialog() {
   return (
     <Dialog.Root>
       <Dialog.Trigger asChild>
-        <button className="rounded-full border-2 border-cream/40 px-5 py-3.5 font-semibold text-cream transition hover:border-lime hover:text-lime">
-          Info gizi lengkap
+        <button className="rounded-full border-2 border-cream/40 px-4 py-2.5 text-sm font-semibold text-cream transition hover:border-lime hover:text-lime md:px-5 md:py-3.5 md:text-base">
+          <span className="hidden sm:inline">Info gizi lengkap</span>
+          <span className="sm:hidden">Info gizi</span>
         </button>
       </Dialog.Trigger>
 

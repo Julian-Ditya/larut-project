@@ -48,7 +48,7 @@ export function Nav({
             onClick={() => setOpen((o) => !o)}
             className="group flex items-center gap-2 rounded-full bg-ink px-4 py-2 text-sm font-semibold text-cream transition hover:bg-moss"
           >
-            Beli No.01
+            Keranjang
             <span
               className={`grid h-6 w-6 place-items-center rounded-full text-xs font-bold transition ${
                 cartCount > 0 ? "bg-lime text-ink" : "bg-cream/20 text-cream/60"
