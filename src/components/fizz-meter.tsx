@@ -21,7 +21,7 @@ export function FizzMeter() {
           <p className="text-xs font-bold uppercase tracking-[0.22em] text-fern">Laboratorium gelembung</p>
           <h2 className="mt-3 font-display text-5xl font-black uppercase tracking-tight md:text-6xl">Seberapa rame sodamu?</h2>
           <p className="mt-5 max-w-md text-ink/70">
-            No.01 dikarbonasi di <b>level 3</b> — cukup buat angkat aroma botani tanpa bikin sendawa di meeting.
+            dikarbonasi di <b>level 3</b> — cukup buat angkat aroma botani tanpa bikin sendawa di meeting.
             Geser slidernya, lihat versi imajinernya.
           </p>
 

@@ -32,7 +32,7 @@ export function Hero() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-tang opacity-60" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-tang" />
               </span>
-              Teh botani bersoda — Seri No.01
+              Teh botani bersoda
             </p>
           </Reveal>
 
@@ -47,7 +47,7 @@ export function Hero() {
 
           <Reveal delay={350} className="mt-7 max-w-md text-lg leading-relaxed text-ink/70">
             Sereh, pandan, dan perasan nipis diseduh dingin semalaman — lalu dikarbonasi lembut.{" "}
-            <Scramble text="LARUT No.01" className="font-semibold text-ink" />: rasa kebun, gelembung kota.
+            <Scramble text="LARUT" className="font-semibold text-ink" />: rasa kebun, gelembung kota.
           </Reveal>
 
           <Reveal delay={480} className="mt-9 flex flex-wrap items-center gap-4">
@@ -76,7 +76,7 @@ export function Hero() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <Image
                   src="https://picsum.photos/seed/larut-botani-bottle/720/960"
-                  alt="Botol LARUT No.01"
+                  alt="Botol LARUT"
                   width={720}
                   height={960}
                   priority
@@ -86,7 +86,7 @@ export function Hero() {
                 />
               <div className="absolute inset-0 bg-gradient-to-t from-ink/35 via-transparent to-transparent" />
               <div className="absolute inset-x-0 bottom-0 flex items-center justify-between px-5 py-4 text-cream">
-                <span className="font-display text-sm font-bold tracking-wide">No.01 — SEREH PANDAN</span>
+                <span className="font-display text-sm font-bold tracking-wide">SEREH PANDAN</span>
                 <span className="rounded-full bg-cream px-2.5 py-1 text-[11px] font-bold text-ink">250 ml</span>
               </div>
             </div>

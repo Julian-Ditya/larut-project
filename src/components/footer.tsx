@@ -37,7 +37,7 @@ export function Footer() {
           <div className="grid grid-cols-2 gap-6 text-sm">
             <div className="space-y-2">
               <p className="text-xs font-bold uppercase tracking-[0.22em] text-lime">Produk</p>
-              {[["No.01 Sereh Pandan", "#beli"], ["No.02 Kunyit Asam", "#rasa"], ["No.03 Rosella Nipis", "#rasa"], ["Langganan", "#beli"]].map(([l, h]) => (
+              {[["Sereh Pandan", "#beli"], ["Kunyit Asam", "#rasa"], ["Rosella Nipis", "#rasa"], ["Langganan", "#beli"]].map(([l, h]) => (
                 <a key={l} href={h} className="block text-cream/70 transition hover:text-lime">{l}</a>
               ))}
             </div>

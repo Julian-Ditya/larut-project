@@ -30,7 +30,7 @@ const add = () => {
   onAdd(pack.bottles, pack.label, finalPrice);
   
   toast({
-    title: `${pack.bottles} botol No.01 masuk keranjang`,
+    title: `${pack.bottles} botol masuk keranjang`,
     desc: subs
       ? `Langganan aktif — hemat 15% (Rp${finalPrice.toLocaleString("id-ID")})`
       : `Total Rp${finalPrice.toLocaleString("id-ID")} — belum termasuk ongkir`,
@@ -41,18 +41,23 @@ const add = () => {
     <section id="beli" className="scroll-mt-24 bg-ink py-24 text-cream md:py-32">
       <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 md:px-8 lg:grid-cols-2">
         <div className="relative mx-auto w-full max-w-sm">
+          {/* Container gambar dengan overflow-hidden */}
           <div className="relative overflow-hidden rounded-t-[999px] rounded-b-3xl border-2 border-cream/30">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="https://picsum.photos/seed/larut-pack-agustus/700/900"
-                alt="Paket LARUT No.01"
-                loading="lazy"
-                className="kenburns h-[420px] w-full object-cover"
-              />
-            <span className="absolute left-4 top-6 rounded-full bg-tang px-3 py-1 font-display text-xs font-black uppercase">
-              Batch 07 • Agustus
-            </span>
+            <img
+              src="https://picsum.photos/seed/larut-pack-agustus/700/900"
+              alt="Paket LARUT"
+              loading="lazy"
+              className="kenburns h-[420px] w-full object-cover"
+            />
           </div>
+          
+          {/* Badge Agustus — DIPISAH dari container, jadi tidak terpotong */}
+          <span className="absolute left-6 top-8 z-10 rounded-full bg-tang px-3 py-1.5 font-display text-xs font-black uppercase text-cream shadow-lg md:left-8 md:top-10">
+            Batch 07 • Agustus
+          </span>
+          
+          {/* Harga per botol — tetap di dalam container */}
           <div className="absolute -bottom-6 right-2 rounded-2xl bg-lime p-4 text-ink shadow-[6px_6px_0_0_var(--color-tang)]">
             <p className="font-display text-2xl font-black">
               Rp{Math.round(pack.price / pack.bottles).toLocaleString("id-ID")}
@@ -66,7 +71,7 @@ const add = () => {
             Rilis 12 Agustus — stok 412 botol
           </p>
           <h2 className="mt-3 font-display text-5xl font-black uppercase tracking-tight md:text-6xl">
-            Bawa pulang No.01
+            Bawa pulang Teh
           </h2>
 
           <RadioGroup.Root
@@ -124,16 +129,18 @@ const add = () => {
             </span>
           </label>
 
-          <div className="mt-6 flex items-end justify-between border-t border-cream/15 pt-5">
-            <div>
+          <div className="mt-6 grid grid-cols-2 items-end gap-4 border-t border-cream/15 pt-5 md:flex md:justify-between">
+            <div className="min-w-0">
               <p className="text-sm text-cream/60">
                 Total {subs && <s className="mr-2 opacity-60">Rp{pack.price.toLocaleString("id-ID")}</s>}
               </p>
-              <p className="font-display text-4xl font-black text-lime">
+              <p className="font-display text-3xl font-black text-lime md:text-4xl">
                 Rp{total.toLocaleString("id-ID")}
               </p>
             </div>
-            <NutritionDialog />
+            <div className="flex justify-end">
+              <NutritionDialog />
+            </div>
           </div>
 
           <button
